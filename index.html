@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Stanka – viac zvukov</title>
+    <style>
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🔔 Zvuková stranka</h2>
+
+<button onclick="playSound('zvuk1.mp3.mp3')">Zvuk 1</button>
+<button onclick="playSound('zvuk2.mp3.mp3')">Zvuk 2</button>
+<button onclick="playSound('zvuk3.mp3.mp3')">Zvuk 3</button>
+
+<audio id="player"></audio>
+
+<script>
+    function playSound(file) {
+        const audio = document.getElementById("player");
+        audio.src = file;
+        audio.currentTime = 0;
+        audio.play();
+    }
+</script>
+
+</body>
+</html>
+
